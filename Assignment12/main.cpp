@@ -7,9 +7,10 @@ int main() {
   ReadCSV csv = ReadCSV("dinoDatasetCSV.csv");
   csv.load_file();
 
-  std::string input;
   int i = 1;
+  std::string input;
   do {
+    //Print 10 dinos
     for (int j = 0; j < 10; j++) {
       std::cout << "Scientific name: " << csv.data[i][0] << std::endl;
       std::cout << "    meaning: " << csv.data[i][2] << std::endl;
@@ -21,6 +22,7 @@ int main() {
       i++;
     }
 
+    //prompt user if they want to see more
     std::cout << std::endl;
     std::cout << "Type 'Next' to see more (or Quit): ";
     std::cin >> input;
